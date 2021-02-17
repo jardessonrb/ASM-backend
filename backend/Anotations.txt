@@ -1,0 +1,25 @@
+#Alguns comandos do docker
+#\docker run --name asm_dba -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+-> Eu crio uma imagem de banco de dados com o nome asm_dba, usuario postgres padrão
+um password = docker rodando na porta 5433:5432 -d postgres
+
+#\docker ps
+->Lista minhas imagens em execução 
+#\docker ps -a
+->Lista todas as minhas imagens incluindo as inativas
+#\docker rm id_da_imagem
+->remove a imagem especifica
+#\docker stop id_da_imagem
+->Pausa a execução da imagem especifica
+
+#\docker start id_da_imagem
+->Inicia a execução da imagem especifica
+
+######## Caso entre no banco através do bin/bash/ do docker ######## 
+usar o psql para executar queries
+
+entrar no banco -> #\psql nomedobanco(asm_dba) usernamedobanco(postgres).
+
+
+########## Cria as migrations ###########
+-> yarn typeorm migration:create -n CreateStudent
